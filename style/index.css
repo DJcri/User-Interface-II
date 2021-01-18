@@ -25,9 +25,11 @@ h1 {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   width: 500px;
   padding: 50px 70px;
   padding-top: 30px;
+  max-width: 500px;
 }
 
 a {
@@ -36,11 +38,12 @@ a {
   color: black;
   background: white;
   border: black 3px solid;
-  width: 30%;
+  width: 200px;
   height: 50px;
   text-align: center;
   font-size: 20px;
   padding-top: 10px;
+  max-width: 200px;
   box-sizing: border-box;
 }
 
@@ -68,7 +71,7 @@ nav a {
   width: 1400px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
 }
 
@@ -77,6 +80,11 @@ nav a {
   width: 670px;
   height: 400px;
   margin: 50px 0;
+}
+
+.main-img,
+.gallery-img {
+  background-position: center;
 }
 
 .main-img {
@@ -130,4 +138,83 @@ footer p {
 
 footer {
   padding: 60px;
+}
+
+@media screen and (max-width: 1500px) {
+  header h1 {
+    text-align: center;
+  }
+  nav {
+    width: 90vw;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+  .desc {
+    width: 80%;
+    margin-top: 0;
+  }
+  .desc h2,
+  .desc p {
+    text-align: center;
+  }
+  .desc h2 {
+    padding-top: 0;
+  }
+  .desc a {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .main-img {
+    margin-bottom: 30px;
+  }
+  .gallery {
+    width: 100vw;
+  }
+  .gallery-img {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  a {
+    margin: 0 auto;
+  }
+  nav {
+    width: 50vw;
+  }
+  nav a {
+    flex: auto;
+    width: 100%;
+    border: black solid 3px;
+    border-bottom: none;
+  }
+  .projects-btn {
+    border-bottom: black solid 3px;
+  }
+  .main-img {
+    width: 435.5px;
+    height: 260px;
+  }
+  .gallery-img {
+    margin: 0 20px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-img {
+    width: 300px;
+    height: 179px;
+  }
+  .gallery-img {
+    margin: 0 10px;
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.gallery-img {
+  margin-bottom: 100px;
 }
